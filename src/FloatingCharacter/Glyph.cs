@@ -3,9 +3,11 @@ using System.Linq;
 
 namespace FloatingCharacter {
     public class Glyph {
-        static char[] floatingChars = "  ั  ็  ิ  ี  ึ  ื  ุ  ู  ่  ้   ๊  ๋   ์  "
-            .Where(x => x != ' ').ToArray();
 
-        public static char[] FloatingCharacters() => floatingChars;
+        public static char[] FloatingCharacters = "  ั  ็  ิ  ี  ึ  ื  ุ  ู  ่  ้   ๊  ๋   ์  "
+            .Where(x => x != ' ').ToArray();
+        
+        public static char[] IgnoreCharacters = "  ั  ็  ิ  ี  ึ  ื  ่  ้   ๊  ๋  ์  "
+            .Where(x => x != ' ').ToArray();
     }
 }
